@@ -47,7 +47,7 @@ pub struct Hashed<K> {
 
 #[inline]
 fn ahash_hash<T: Hash + ?Sized>(value: &T) -> u64 {
-    let mut hasher = BuildHasherDefault::<ahash::AHasher>::default().build_hasher();
+    let mut hasher = BuildHasherDefault::<wyhash::WyHash>::default().build_hasher();
     value.hash(&mut hasher);
     hasher.finish()
 }

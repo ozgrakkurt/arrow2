@@ -32,7 +32,9 @@ hash_hasher = "^2.0.3"
 simdutf8 = "0.1.4"
 
 # A Rust port of SwissTable
-hashbrown = { version = "0.14", default-features = false, features = ["ahash"] }
+hashbrown = { version = "0.14", default-features = false }
+
+wyhash = "0.5.0"
 
 # for timezone support
 chrono-tz = { version = "0.8", optional = true }
@@ -96,9 +98,6 @@ multiversion = { version = "0.7.3", optional = true }
 
 # For support for odbc
 odbc-api = { version = "0.36", optional = true }
-
-# Faster hashing
-ahash = "0.8"
 
 # For `LIKE` matching "contains" fast-path
 memchr = { version = "2.6", optional = true }
