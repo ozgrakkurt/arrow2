@@ -37,6 +37,8 @@ use crate::types::NativeType;
 pub use nested::{num_values, write_rep_and_def};
 pub use pages::{to_leaves, to_nested, to_parquet_leaves};
 use parquet2::schema::types::PrimitiveType as ParquetPrimitiveType;
+#[cfg(feature = "io_parquet_async")]
+pub use parquet2::write::FileStreamer;
 pub use parquet2::{
     compression::{BrotliLevel, CompressionOptions, GzipLevel, ZstdLevel},
     encoding::Encoding,
